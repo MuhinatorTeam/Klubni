@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <script>
+	let yourNumber; //число
+	yourNumber = prompt("Введите целое число");
+	if((isNaN(yourNumber)) || (yourNumber == "") || (yourNumber == null)) {
+		alert("Ошибка i404. Введите число!");
+	} else if ((yourNumber % 2 == yourNumber) && (yourNumber != 0) && (yourNumber != 1)) {
+		alert("Ошибка i282. Введите ЦЕЛОЕ число!");
+	} else if (yourNumber % 2 === 0) {
+		alert( `Число ${yourNumber} является чётным` );
+	} else if (yourNumber % 2 === 1) {
+		alert( `Число ${yourNumber} является нечётным` );
+	}else {
+		alert( "Ошибка i666. Обнаружено необрабатываемое исключение. Ваш компьютер будет принудительно перезагружен." );
+	}
+  </script>
+
+
+</body>
+
+</html>

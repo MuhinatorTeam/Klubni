@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <script>
+	let inParameter; //in
+	let nParameter; //n
+	let finalList;
+	function createList(a, b) {
+		let c = "";
+		for(let i = 0; i < b; i++) {
+			c += String(a);
+		}
+		return(c);
+	}
+	inParameter = prompt("Введите in");
+	nParameter = prompt("Введите n");
+	finalList = createList(inParameter, nParameter);
+	console.log(finalList);
+	
+  </script>
+
+
+</body>
+
+</html>
