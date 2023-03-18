@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+
+<title>Домашка 2</title>
+
+<style>
+.titlePage {
+text-align: center;
+}
+
+.block {
+border-width: 0.1em;
+border-style: solid;
+border-color: Red;
+margin: auto;
+top: 50%;
+left: 50%;
+position: absolute;
+margin-top: -25em;
+height: 50em;
+margin-left: -25em;
+width: 50em;
+}
+</style>
+
+<body>
+<div class="titlePage">
+<p>домашнее задание 2</p>
+</div>
+<div class="block">
+a <input id="inputA"> </input>
+<br>
+b <input id="inputB"> </input>
+<br>
+c <input id="inputC"> </input>
+<button onclick="searchRoots()"> Нажми меня </button> 
+<p id="result"> </p>
+</div>
+
+
+  <script>
+  function searchRoots() {
+	let x1 = 14;
+	let x2 = 88;
+	const a = document.getElementById("inputA").value;
+	const b = document.getElementById("inputB").value;
+	const c = document.getElementById("inputC").value;
+	const d = b*b - 4*a*c;
+	if (d < 0) {
+		x1 = "Дискриминант меньше нуля";
+		x2 = "решения нет";
+	} else {
+		x1 = (-b + Math.sqrt(d))/(2*a);
+		x2 = (-b - Math.sqrt(d))/(2*a);
+	}
+	const roots = x1 + ", " + x2;
+	document.getElementById("result").innerText = roots;
+	//console.log(roots);
+	}
+
+	//let inParameter; //in
+	//let nParameter; //n
+	//let finalList;
+	//function createList(a, b) {
+	//	let c = "";
+	//	for(let i = 0; i < b; i++) {
+	//		c += String(a);
+	//	}
+	//	return(c);
+	//}
+	//inParameter = prompt("Введите in");
+	//nParameter = prompt("Введите n");
+	//finalList = createList(inParameter, nParameter);
+	//console.log(finalList);
+	
+  </script>
+
+
+
+
+</body></html>
